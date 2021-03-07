@@ -4,11 +4,19 @@
 Sweater Weather was a 5 day project for Turing School of Software & Design's Backend Program. This is a backend application that exposes API endpoints (outlined below) for a frontend team to utilize for an application where users can plan a road trip. This application exposes endpoints to see the current weather as well as the forecasted weather at a specified destination.  
 
 ## README Content
+- [Learning Goals](#learning-goals)
 - [Getting Started](#getting-started)
 - [Testing](#testing)
 - [Database Schema](#database-schema)
 - [Endpoints](#endpoints)
 - [Author](#author)
+
+## Learning Goals  
+- Expose an API that aggregates data from multiple external APIs
+- Expose an API that requires an authentication token
+- Expose an API for CRUD functionality
+- Determine completion criteria based on the needs of other developers
+- Research, select, and consume an API based on your needs as a developer
 
 ## Getting Started  
 ```  
