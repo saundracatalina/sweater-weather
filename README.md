@@ -28,6 +28,10 @@ $ cd sweater-weather
 ![rails-badge](https://img.shields.io/badge/Rails-5.2.4-informational?style=flat-square)    
 ![ruby-badge](https://img.shields.io/badge/Ruby-2.5.3-informational?style=flat-square)  
 
+### Request your own API Keys
+- [MAPQUEST](https://developer.mapquest.com/documentation/geocoding-api/)
+- [OpenWeather](https://openweathermap.org/appid#signup)
+
 ### Installing
 #### Install gems and setup your database:
 ```
@@ -61,6 +65,7 @@ $ open coverage/index.html
 
 
 ## API Endpoints
+
 ### Weather Endpoint Examples
 ```
 # Retrieve weather for a city
