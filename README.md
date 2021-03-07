@@ -53,9 +53,40 @@ $ open coverage/index.html
 
 
 ## API Endpoints
+### Weather Endpoint Examples
+```
+# Retrieve weather for a city
+GET http://localhost:3000/api/v1/forecast?location=denver,co
+```
+- IMAGE OF JSON RESPONSE HERE
 
+```
+# Retrieve background image for a city
+GET http://localhost:3000/api/v1/backgrounds?location=denver,co
+```
+- IMAGE OF JSON RESPONSE HERE
 
+### User Login Endpoint Examples
 
+```
+# Create a user registration
+POST http://localhost:3000/api/v1/users
+```
+- IMAGE OF JSON RESPONSE HERE
+
+```
+# Create a session for a user
+POST http://localhost:3000/api/v1/sessions
+```
+- IMAGE OF JSON RESPONSE HERE
+
+### User Road Trip Endpoint Examples
+
+```
+# Create a road trip
+POST http://localhost:3000/api/v1/road_trip
+```
+- IMAGE OF JSON RESPONSE HERE
 
 
 ## Author
