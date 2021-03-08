@@ -14,4 +14,14 @@ describe 'LocationService' do
       expect(results[0][:locations][0][:latLng][:lng]).to be_a(Float)
     end
   end
+  describe '.route_details' do
+    it 'returns JSON that includes the travel time of a trip' do
+      from = "Denver,CO"
+      to = "Pueblo,CO"
+      data = LocationService.route_details(from, to)
+
+      expect(data[:route]).to be_a(Hash)
+      expect(data[:route][:formattedTime]).to be_a(String)
+    end
+  end
 end
