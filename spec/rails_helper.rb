@@ -1,14 +1,13 @@
-# This file is copied to spec/ when you run 'rails generate rspec:install
-require 'rspec/rails'
-require 'webmock/rspec'
+require 'spec_helper'
+# require 'webmock/rspec'
 require 'simplecov'
 SimpleCov.start do
   add_filter ['spec/', 'config/']
 end
 
-require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../config/environment', __dir__)
+require 'rspec/rails'
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 # Add additional requires below this line. Rails is not loaded until this point!
@@ -76,7 +75,7 @@ Shoulda::Matchers.configure do |config|
   end
 end
 
-VCR.configure do |config|
-  config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
-  config.hook_into :webmock
-end
+# VCR.configure do |config|
+#   config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
+#   config.hook_into :webmock
+# end
