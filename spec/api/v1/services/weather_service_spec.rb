@@ -3,9 +3,8 @@ require 'rails_helper'
 describe 'WeatherService' do
   describe '.weather_details' do
     it 'can show the current, hourly, and daily weather details for a given lat/lon' do
-      lat = 39.738453
-      lon = -104.984853
-      data = WeatherService.weather_details(lat, lon)
+      coord = {lat: 39.738453, lng: -104.984853 }
+      data = WeatherService.weather_details(coord)
 
       expect(data[:current]).to be_a(Hash)
       expect(data[:current][:temp]).to be_a(Float)
