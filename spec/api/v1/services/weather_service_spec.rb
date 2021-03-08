@@ -7,7 +7,7 @@ describe 'WeatherService' do
       data = WeatherService.weather_details(coord)
 
       expect(data[:current]).to be_a(Hash)
-      expect(data[:current][:temp]).to be_a(Float)
+      expect(data[:current][:temp]).to be_a(Numeric)
       expect(data[:current][:weather][0][:description]).to be_a(String)
 
       expect(data[:hourly]).to be_an(Array)

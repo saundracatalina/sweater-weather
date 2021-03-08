@@ -7,7 +7,7 @@ describe 'MunchieFacade' do
       to = "Pueblo,CO"
       food = "hamburger"
       data = MunchieFacade.food_trip_details(from, to, food)
-# require "pry"; binding.pry
+
       expect(data.destination_city).to eq("Pueblo,CO")
       expect(data.destination_city).to be_a(String)
 
