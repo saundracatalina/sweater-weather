@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'LocationService' do
   it '.location_details' do
-    location = "Denver, CO"
+    location = "Denver,CO"
     data = LocationService.location_details(location)
     results = data[:results]
 
