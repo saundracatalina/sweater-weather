@@ -32,4 +32,14 @@ describe "a FE request cycle for a specific city's image" do
       expect(attributes[:credit][:author]).to be_a(String)
     end
   end
+  it "responds with a 400 status code if no location is provided" do
+    get "/api/v1/backgrounds?location="
+
+    expect(response.status).to eq(400)
+  end
+  it "responds with a 400 status code if no location param is provided" do
+    get "/api/v1/backgrounds"
+
+    expect(response.status).to eq(400)
+  end
 end
