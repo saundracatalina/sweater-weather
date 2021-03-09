@@ -38,7 +38,6 @@ $ cd sweater-weather
 $ bundle install
 $ rails db:create
 $ rails db:migrate
-$ rails db:seed
 ```
 #### Run your own development server:  
 - The command below starts a local server where you can check out endpoints from this API.  
