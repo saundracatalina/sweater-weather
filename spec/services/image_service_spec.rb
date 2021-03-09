@@ -9,6 +9,22 @@ describe 'ImageService' do
         results = data[:results]
 
         expect(results).to be_an(Array)
+        expect(results.count).to eq(1)
+        expect(results[0]).to be_a(Hash)
+        expect(results[0][:urls]).to be_a(Hash)
+        expect(results[0][:urls][:raw]).to be_a(String)
+        expect(results[0][:links]).to be_a(Hash)
+        expect(results[0][:links][:html]).to be_a(String)
+      end
+    end
+    it 'can return JSON for Hartford,CT' do
+      VCR.use_cassette('hartford_image_details') do
+        location = "Hartford, CT"
+        data = ImageService.image_details(location)
+        results = data[:results]
+
+        expect(results).to be_an(Array)
+        expect(results.count).to eq(1)
         expect(results[0]).to be_a(Hash)
         expect(results[0][:urls]).to be_a(Hash)
         expect(results[0][:urls][:raw]).to be_a(String)
