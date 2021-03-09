@@ -82,7 +82,7 @@ GET http://localhost:3000/api/v1/forecast?location=denver,co
 ```
 GET http://localhost:3000/api/v1/backgrounds?location=denver,co
 ```
-- IMAGE OF JSON RESPONSE HERE
+<img width="710" alt="Screen Shot 2021-03-09 at 11 31 43 AM" src="https://user-images.githubusercontent.com/68261312/110519844-07a67d00-80cb-11eb-8c7c-fd7fc31ae5de.png">
 
 ### Create a user registration to login
 ```
