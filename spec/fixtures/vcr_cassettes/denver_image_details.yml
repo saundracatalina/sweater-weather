@@ -1,0 +1,100 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.unsplash.com/search/photos?client_id=PHOTO_API_KEY&per_page=1&query=location
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1869'
+      Server:
+      - Cowboy
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Request-Method:
+      - "*"
+      Access-Control-Allow-Headers:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Link,X-Total,X-Per-Page,X-RateLimit-Limit,X-RateLimit-Remaining
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Link:
+      - <https://api.unsplash.com/search/photos?client_id=PHOTO_API_KEY&page=509&per_page=1&query=location>;
+        rel="last", <https://api.unsplash.com/search/photos?client_id=PHOTO_API_KEY&page=2&per_page=1&query=location>;
+        rel="next"
+      X-Total:
+      - '509'
+      X-Per-Page:
+      - '1'
+      Content-Type:
+      - application/json
+      Etag:
+      - W/"5704d8ab5b9412c7e1b8e258253e9e80"
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Remaining:
+      - '36'
+      X-Request-Id:
+      - e93fd48a-2491-4dd3-b9c6-e7c83a9a4aa6
+      X-Runtime:
+      - '0.060379'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Via:
+      - 1.1 vegur, 1.1 varnish, 1.1 varnish
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Tue, 09 Mar 2021 16:54:30 GMT
+      Age:
+      - '660'
+      X-Served-By:
+      - cache-dca17737-DCA, cache-den8241-DEN
+      X-Cache:
+      - MISS, HIT
+      X-Cache-Hits:
+      - 0, 1
+      X-Timer:
+      - S1615308870.127252,VS0,VE1
+      Vary:
+      - Accept-Encoding, Origin,Authorization,client-geo-region
+    body:
+      encoding: ASCII-8BIT
+      string: '{"total":509,"total_pages":509,"results":[{"id":"BJXAxQ1L7dI","created_at":"2019-01-24T11:01:41-05:00","updated_at":"2021-03-08T13:07:17-05:00","promoted_at":null,"width":6016,"height":4000,"color":"#c0d9d9","blur_hash":"LTH2vK4n4mbbRiVr%hx]I9x]t7M{","description":"Local
+        SEO Google map image I created for a blog post on local marketing. An everyday
+        interaction with technology.","alt_description":"person holding black smartphone","urls":{"raw":"https://images.unsplash.com/photo-1548345680-f5475ea5df84?ixid=MnwyMTI4MzN8MHwxfHNlYXJjaHwxfHxsb2NhdGlvbnxlbnwwfHx8fDE2MTUzMDgyMDk\u0026ixlib=rb-1.2.1","full":"https://images.unsplash.com/photo-1548345680-f5475ea5df84?crop=entropy\u0026cs=srgb\u0026fm=jpg\u0026ixid=MnwyMTI4MzN8MHwxfHNlYXJjaHwxfHxsb2NhdGlvbnxlbnwwfHx8fDE2MTUzMDgyMDk\u0026ixlib=rb-1.2.1\u0026q=85","regular":"https://images.unsplash.com/photo-1548345680-f5475ea5df84?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=MnwyMTI4MzN8MHwxfHNlYXJjaHwxfHxsb2NhdGlvbnxlbnwwfHx8fDE2MTUzMDgyMDk\u0026ixlib=rb-1.2.1\u0026q=80\u0026w=1080","small":"https://images.unsplash.com/photo-1548345680-f5475ea5df84?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=MnwyMTI4MzN8MHwxfHNlYXJjaHwxfHxsb2NhdGlvbnxlbnwwfHx8fDE2MTUzMDgyMDk\u0026ixlib=rb-1.2.1\u0026q=80\u0026w=400","thumb":"https://images.unsplash.com/photo-1548345680-f5475ea5df84?crop=entropy\u0026cs=tinysrgb\u0026fit=max\u0026fm=jpg\u0026ixid=MnwyMTI4MzN8MHwxfHNlYXJjaHwxfHxsb2NhdGlvbnxlbnwwfHx8fDE2MTUzMDgyMDk\u0026ixlib=rb-1.2.1\u0026q=80\u0026w=200"},"links":{"self":"https://api.unsplash.com/photos/BJXAxQ1L7dI","html":"https://unsplash.com/photos/BJXAxQ1L7dI","download":"https://unsplash.com/photos/BJXAxQ1L7dI/download","download_location":"https://api.unsplash.com/photos/BJXAxQ1L7dI/download?ixid=MnwyMTI4MzN8MHwxfHNlYXJjaHwxfHxsb2NhdGlvbnxlbnwwfHx8fDE2MTUzMDgyMDk"},"categories":[],"likes":206,"liked_by_user":false,"current_user_collections":[],"sponsorship":null,"user":{"id":"dAcQqTLmBPk","updated_at":"2021-03-09T07:28:13-05:00","username":"hjkp","name":"henry
+        perks","first_name":"henry","last_name":"perks","twitter_username":"hjkp60","portfolio_url":"https://www.hp-consult.co.uk/images-photography/","bio":"I
+        help companies and individuals get their business right online. Photography
+        enthusiast enjoying the Unsplash inspiration and making a small contribution.
+        Travel, landscapes, architecture, contrast, food, plants and garden all catch
+        my eye.","location":"London","links":{"self":"https://api.unsplash.com/users/hjkp","html":"https://unsplash.com/@hjkp","photos":"https://api.unsplash.com/users/hjkp/photos","likes":"https://api.unsplash.com/users/hjkp/likes","portfolio":"https://api.unsplash.com/users/hjkp/portfolio","following":"https://api.unsplash.com/users/hjkp/following","followers":"https://api.unsplash.com/users/hjkp/followers"},"profile_image":{"small":"https://images.unsplash.com/profile-1465755447612-04f674ce1eaf?ixlib=rb-1.2.1\u0026q=80\u0026fm=jpg\u0026crop=faces\u0026cs=tinysrgb\u0026fit=crop\u0026h=32\u0026w=32","medium":"https://images.unsplash.com/profile-1465755447612-04f674ce1eaf?ixlib=rb-1.2.1\u0026q=80\u0026fm=jpg\u0026crop=faces\u0026cs=tinysrgb\u0026fit=crop\u0026h=64\u0026w=64","large":"https://images.unsplash.com/profile-1465755447612-04f674ce1eaf?ixlib=rb-1.2.1\u0026q=80\u0026fm=jpg\u0026crop=faces\u0026cs=tinysrgb\u0026fit=crop\u0026h=128\u0026w=128"},"instagram_username":"https://www.instagram.com/hjkp60/","total_collections":27,"total_likes":265,"total_photos":104,"accepted_tos":true,"for_hire":false},"tags":[{"type":"search","title":"cell
+        phone"},{"type":"search","title":"mobile phone"},{"type":"landing_page","title":"phone","source":{"ancestry":{"type":{"slug":"wallpapers","pretty_slug":"HD
+        Wallpapers"},"category":{"slug":"phone","pretty_slug":"Phone"}},"title":"HD
+        Phone Wallpapers","subtitle":"Download Free Phone Wallpapers","description":"Take
+        your phone style to the next level with gorgeous phone wallpapers from Unsplash.
+        Our community of professional photographers have contributed thousands of
+        beautiful images, and all of them can be downloaded for free.","meta_title":"Phone
+        Wallpapers: Free HD Download [500+ HQ] | Unsplash","meta_description":"Choose
+        from hundreds of free phone wallpapers. Download HD wallpapers for free on
+        Unsplash.","cover_photo":{"id":"K-94QEMm3vo","created_at":"2018-09-13T22:10:32-04:00","updated_at":"2021-02-28T15:04:20-05:00","promoted_at":null,"width":2121,"height":3770,"color":"#262626","blur_hash":"LB8}DS?dwfrX-DxbtlozS~enspR%","description":null,"alt_description":"gray
+        high-rise building","urls":{"raw":"https://images.unsplash.com/photo-1536890992765-f42a1ee1e2a8?ixlib=rb-1.2.1","full":"https://images.unsplash.com/photo-1536890992765-f42a1ee1e2a8?ixlib=rb-1.2.1\u0026q=85\u0026fm=jpg\u0026crop=entropy\u0026cs=srgb","regular":"https://images.unsplash.com/photo-1536890992765-f42a1ee1e2a8?ixlib=rb-1.2.1\u0026q=80\u0026fm=jpg\u0026crop=entropy\u0026cs=tinysrgb\u0026w=1080\u0026fit=max","small":"https://images.unsplash.com/photo-1536890992765-f42a1ee1e2a8?ixlib=rb-1.2.1\u0026q=80\u0026fm=jpg\u0026crop=entropy\u0026cs=tinysrgb\u0026w=400\u0026fit=max","thumb":"https://images.unsplash.com/photo-1536890992765-f42a1ee1e2a8?ixlib=rb-1.2.1\u0026q=80\u0026fm=jpg\u0026crop=entropy\u0026cs=tinysrgb\u0026w=200\u0026fit=max"},"links":{"self":"https://api.unsplash.com/photos/K-94QEMm3vo","html":"https://unsplash.com/photos/K-94QEMm3vo","download":"https://unsplash.com/photos/K-94QEMm3vo/download","download_location":"https://api.unsplash.com/photos/K-94QEMm3vo/download"},"categories":[],"likes":332,"liked_by_user":false,"current_user_collections":[],"sponsorship":null,"user":{"id":"oH4O0ZqEZKk","updated_at":"2021-02-28T22:03:39-05:00","username":"tjholowaychuk","name":"Tj
+        Holowaychuk","first_name":"Tj","last_name":"Holowaychuk","twitter_username":"tjholowaychuk","portfolio_url":"https://www.instagram.com/tjholowaychuk/","bio":"Street
+        photographer.","location":"Victoria, BC","links":{"self":"https://api.unsplash.com/users/tjholowaychuk","html":"https://unsplash.com/@tjholowaychuk","photos":"https://api.unsplash.com/users/tjholowaychuk/photos","likes":"https://api.unsplash.com/users/tjholowaychuk/likes","portfolio":"https://api.unsplash.com/users/tjholowaychuk/portfolio","following":"https://api.unsplash.com/users/tjholowaychuk/following","followers":"https://api.unsplash.com/users/tjholowaychuk/followers"},"profile_image":{"small":"https://images.unsplash.com/profile-1517101076946-8d4c9f84d837?ixlib=rb-1.2.1\u0026q=80\u0026fm=jpg\u0026crop=faces\u0026cs=tinysrgb\u0026fit=crop\u0026h=32\u0026w=32","medium":"https://images.unsplash.com/profile-1517101076946-8d4c9f84d837?ixlib=rb-1.2.1\u0026q=80\u0026fm=jpg\u0026crop=faces\u0026cs=tinysrgb\u0026fit=crop\u0026h=64\u0026w=64","large":"https://images.unsplash.com/profile-1517101076946-8d4c9f84d837?ixlib=rb-1.2.1\u0026q=80\u0026fm=jpg\u0026crop=faces\u0026cs=tinysrgb\u0026fit=crop\u0026h=128\u0026w=128"},"instagram_username":"tjholowaychuk","total_collections":0,"total_likes":27,"total_photos":126,"accepted_tos":true}}}}]}]}'
+  recorded_at: Tue, 09 Mar 2021 16:54:30 GMT
+recorded_with: VCR 6.0.0
