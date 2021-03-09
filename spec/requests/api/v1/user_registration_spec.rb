@@ -1,0 +1,32 @@
+require 'rails_helper'
+
+describe "a FE request cycle for registering a user" do
+  it "can register a user successfully and generate a unique api key" do
+    params = {
+        email:  'user@example.com',
+        password: 'password',
+        password_confirmation: 'password'
+      }
+
+      post '/api/v1/users', params: params
+
+      expect(User.all.count).to eq(1)
+      user = User.last
+      expect(response).to be_successful
+      expect(response.status).to eq(201)
+      expect(response.content_type).to eq('application/json')
+
+      json = JSON.parse(response.body, symbolize_names: true)
+      data = json[:data]
+      attributes = data[:attributes]
+      expect(json).to_not have_key(:error)
+      expect(json).to have_key(:data)
+      expect(data[:type]).to eq('users')
+      expect(data[:id]).to eq(user.id.to_s)
+      expect(attributes).to be_a(Hash)
+      expect(attributes[:email]).to eq(user.email)
+      expect(attributes[:api_key]).to eq(user.api_key)
+      expect(attributes).to_not have_key(:password)
+      expect(attributes).to_not have_key(:password_confirmation)
+  end
+end
