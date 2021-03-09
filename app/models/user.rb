@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  before_create :set_api_key
+  after_create :set_api_key
   validates :email,
             presence: true,
             uniqueness: true
