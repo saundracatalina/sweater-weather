@@ -87,4 +87,14 @@ describe "a FE request cycle for a specific city's weather" do
       expect(attributes[:hourly_weather][0]).to_not have_key(:wind_deg)
     end
   end
+  it "responds with a 400 status code if no location is provided" do
+    get "/api/v1/forecast?location="
+
+    expect(response.status).to eq(400)
+  end
+  it "responds with a 400 status code if no location param is provided" do
+    get "/api/v1/forecast"
+
+    expect(response.status).to eq(400)
+  end
 end
