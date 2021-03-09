@@ -28,9 +28,12 @@ $ cd sweater-weather
 ![rails-badge](https://img.shields.io/badge/Rails-5.2.4-informational?style=flat-square)    
 ![ruby-badge](https://img.shields.io/badge/Ruby-2.5.3-informational?style=flat-square)  
 
-### Request your own API Keys
-- [MAPQUEST](https://developer.mapquest.com/documentation/geocoding-api/)
-- [OpenWeather](https://openweathermap.org/appid#signup)
+### Content being exposed through this API can be attributed to:
+#### MapQuest, OpenWeather, and Unsplash
+- Request your own API Keys here:  
+- [MapQuest](https://developer.mapquest.com/documentation/geocoding-api/)
+- [OpenWeather](https://openweathermap.org/appid#signup)  
+- [Unsplash](https://unsplash.com/developers)
 
 ### Installing
 #### Install gems and setup your database:
@@ -49,6 +52,8 @@ $ rails s
 ## Testing Tools Utilized
 - RSpec  
 - Capybara  
+- Webmock  
+- VCR
 - SimleCov  
 - To run test suite:  
 ```
@@ -67,11 +72,12 @@ $ open coverage/index.html
 ## API Endpoints
 
 ### Weather Endpoint Examples
+#### Retrieve weather for a city
+- Returns current weather, 5 days of daily weather and 8 hours of hourly weather  
 ```
-# Retrieve weather for a city
 GET http://localhost:3000/api/v1/forecast?location=denver,co
 ```
-- IMAGE OF JSON RESPONSE HERE
+<img width="501" alt="Screen Shot 2021-03-08 at 9 44 30 PM" src="https://user-images.githubusercontent.com/68261312/110419921-7813b680-8057-11eb-95b1-2ccc01dcde69.png">  
 
 ```
 # Retrieve background image for a city
