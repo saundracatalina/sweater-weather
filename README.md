@@ -41,7 +41,6 @@ $ cd sweater-weather
 $ bundle install
 $ rails db:create
 $ rails db:migrate
-$ rails db:seed
 ```
 #### Run your own development server:  
 - The command below starts a local server where you can check out endpoints from this API.  
@@ -84,11 +83,11 @@ GET http://localhost:3000/api/v1/backgrounds?location=denver,co
 ```
 <img width="710" alt="Screen Shot 2021-03-09 at 11 31 43 AM" src="https://user-images.githubusercontent.com/68261312/110519844-07a67d00-80cb-11eb-8c7c-fd7fc31ae5de.png">
 
-### Create a user registration to login
+### Create a user registered user
 ```
 POST http://localhost:3000/api/v1/users
 ```
-- IMAGE OF JSON RESPONSE HERE
+<img width="471" alt="Screen Shot 2021-03-09 at 2 27 22 PM" src="https://user-images.githubusercontent.com/68261312/110540307-91624480-80e3-11eb-96ad-0552f637f8c3.png">
 
 ### Create a session for a user
 ```
