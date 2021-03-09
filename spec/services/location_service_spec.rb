@@ -13,7 +13,20 @@ describe 'LocationService' do
         expect(results[0][:locations][0][:latLng]).to be_a(Hash)
         expect(results[0][:locations][0][:latLng][:lat]).to be_a(Float)
         expect(results[0][:locations][0][:latLng][:lng]).to be_a(Float)
-      end 
+      end
+    end
+    it 'can return JSON for Hartford,CT' do 
+      VCR.use_cassette('location_coords_hartford_ct') do
+        location = "Hartford,CT"
+        data = LocationService.location_details(location)
+        results = data[:results]
+
+        expect(results).to be_an(Array)
+        expect(results[0][:locations]).to be_an(Array)
+        expect(results[0][:locations][0][:latLng]).to be_a(Hash)
+        expect(results[0][:locations][0][:latLng][:lat]).to be_a(Float)
+        expect(results[0][:locations][0][:latLng][:lng]).to be_a(Float)
+      end
     end
   end
 end
