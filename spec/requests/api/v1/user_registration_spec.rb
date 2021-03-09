@@ -30,7 +30,7 @@ describe "a FE request cycle for registering a user" do
     expect(attributes).to_not have_key(:password)
     expect(attributes).to_not have_key(:password_confirmation)
   end
-  it "cannot register a user if no email, password, or password confirmation is sent" do
+  it "cannot register a user if no password is sent with request" do
     params = {
         email:  'user@example.com',
         password_confirmation: 'password'
@@ -39,7 +39,37 @@ describe "a FE request cycle for registering a user" do
 
     post '/api/v1/users', headers: headers, params: JSON.generate(params)
 
+    json = JSON.parse(response.body, symbolize_names: true)
     expect(response).to_not be_successful
     expect(response.status).to eq(401)
+    expect(json[:error]).to eq("Account was not created, please try again")
+  end
+  it "cannot register a user if no password_confirmation is sent with request" do
+    params = {
+        email:  'user@example.com',
+        password: 'password',
+      }
+    headers = { 'CONTENT_TYPE': 'application/json', 'ACCEPT': 'application/json' }
+
+    post '/api/v1/users', headers: headers, params: JSON.generate(params)
+
+    json = JSON.parse(response.body, symbolize_names: true)
+    expect(response).to_not be_successful
+    expect(response.status).to eq(401)
+    expect(json[:error]).to eq("Account was not created, please try again")
+  end
+  it "cannot register a user if no email is sent with request" do
+    params = {
+        password: 'password',
+        password_confirmation: 'password'
+      }
+    headers = { 'CONTENT_TYPE': 'application/json', 'ACCEPT': 'application/json' }
+
+    post '/api/v1/users', headers: headers, params: JSON.generate(params)
+
+    json = JSON.parse(response.body, symbolize_names: true)
+    expect(response).to_not be_successful
+    expect(response.status).to eq(401)
+    expect(json[:error]).to eq("Account was not created, please try again")
   end
 end
