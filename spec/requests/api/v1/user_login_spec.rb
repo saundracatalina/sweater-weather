@@ -19,7 +19,7 @@ describe "a FE request cycle for a user logging in" do
     expect(data).to be_a(Hash)
     expect(data[:type]).to be_a(String)
     expect(data[:id]).to be_a(String)
-    expect(data[:attributes]).to be_a(String)
+    expect(data[:attributes]).to be_a(Hash)
     expect(data[:attributes][:email]).to be_a(String)
     expect(data[:attributes][:api_key]).to be_a(String)
     expect(data[:attributes][:api_key]).to eq(user.api_key)
