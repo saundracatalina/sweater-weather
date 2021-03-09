@@ -1,5 +1,5 @@
 require 'spec_helper'
-# require 'webmock/rspec'
+require 'webmock/rspec'
 require 'simplecov'
 SimpleCov.start do
   add_filter ['spec/', 'config/']
@@ -75,7 +75,7 @@ Shoulda::Matchers.configure do |config|
   end
 end
 
-# VCR.configure do |config|
-#   config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
-#   config.hook_into :webmock
-# end
+VCR.configure do |config|
+  config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
+  config.hook_into :webmock
+end
