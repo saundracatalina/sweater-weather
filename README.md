@@ -71,38 +71,34 @@ $ open coverage/index.html
 
 ## API Endpoints
 
-### Weather Endpoint Examples
-#### Retrieve weather for a city
+### Retrieve weather for a specified city
 - Returns current weather, 5 days of daily weather and 8 hours of hourly weather  
 ```
 GET http://localhost:3000/api/v1/forecast?location=denver,co
 ```
 <img width="501" alt="Screen Shot 2021-03-08 at 9 44 30 PM" src="https://user-images.githubusercontent.com/68261312/110419921-7813b680-8057-11eb-95b1-2ccc01dcde69.png">  
 
+### Retrieve background image for a city
 ```
-# Retrieve background image for a city
 GET http://localhost:3000/api/v1/backgrounds?location=denver,co
 ```
 - IMAGE OF JSON RESPONSE HERE
 
-### User Login Endpoint Examples
-
+### Create a user registration to login
 ```
-# Create a user registration
 POST http://localhost:3000/api/v1/users
 ```
 - IMAGE OF JSON RESPONSE HERE
 
+### Create a session for a user
 ```
-# Create a session for a user
 POST http://localhost:3000/api/v1/sessions
 ```
 - IMAGE OF JSON RESPONSE HERE
 
-### User Road Trip Endpoint Examples
+### Create Road Trip by a User
 
 ```
-# Create a road trip
 POST http://localhost:3000/api/v1/road_trip
 ```
 - IMAGE OF JSON RESPONSE HERE
