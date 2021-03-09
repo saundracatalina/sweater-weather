@@ -93,7 +93,7 @@ POST http://localhost:3000/api/v1/users
 ```
 POST http://localhost:3000/api/v1/sessions
 ```
-- IMAGE OF JSON RESPONSE HERE
+<img width="476" alt="Screen Shot 2021-03-09 at 3 50 22 PM" src="https://user-images.githubusercontent.com/68261312/110549349-29b1f680-80ef-11eb-991c-0f0157f5b667.png">
 
 ### Create Road Trip by a User
 
