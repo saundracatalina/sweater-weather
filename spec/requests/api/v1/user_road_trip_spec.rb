@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "a FE request cycle for a registered user creating a road trip" do
-  it "can create a road trip when given a start point, destination, and a valid api_key" do
+  it "can create a roadtrip when given a start point, destination, and a valid api_key" do
     user = create(:user)
     params = {
               "origin": "Denver,CO",
