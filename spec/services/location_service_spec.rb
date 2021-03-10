@@ -15,7 +15,7 @@ describe 'LocationService' do
         expect(results[0][:locations][0][:latLng][:lng]).to be_a(Float)
       end
     end
-    it 'can return JSON for Hartford,CT' do 
+    it 'can return JSON for Hartford,CT' do
       VCR.use_cassette('location_coords_hartford_ct') do
         location = "Hartford,CT"
         data = LocationService.location_details(location)
@@ -26,6 +26,18 @@ describe 'LocationService' do
         expect(results[0][:locations][0][:latLng]).to be_a(Hash)
         expect(results[0][:locations][0][:latLng][:lat]).to be_a(Float)
         expect(results[0][:locations][0][:latLng][:lng]).to be_a(Float)
+      end
+    end
+  end
+  describe '.road_trip' do
+    it 'returns JSON that includes the travel time of a trip' do
+      VCR.use_cassette('road_trip_travel_time') do
+        from = "Denver,CO"
+        to = "Pueblo,CO"
+        data = LocationService.road_trip(from, to)
+
+        expect(data[:route]).to be_a(Hash)
+        expect(data[:route][:formattedTime]).to be_a(String)
       end
     end
   end
