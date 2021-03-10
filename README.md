@@ -44,6 +44,8 @@ $ rails db:migrate
 ```
 #### Run your own development server:  
 - The command below starts a local server where you can check out endpoints from this API.  
+- Once your spin up that server you can use Postman to check responses. This will make it easier for the end points where params need to be passed in the body of the request.  
+
 ```
 $ rails s
 ```
@@ -83,21 +85,54 @@ GET http://localhost:3000/api/v1/backgrounds?location=denver,co
 ```
 <img width="710" alt="Screen Shot 2021-03-09 at 11 31 43 AM" src="https://user-images.githubusercontent.com/68261312/110519844-07a67d00-80cb-11eb-8c7c-fd7fc31ae5de.png">
 
-### Create a user registered user
+### User Registration
 ```
+NOTE: User information must be sent in the body of the request NOT in query params
+
 POST http://localhost:3000/api/v1/users
+Content-Type: application/json
+Accept: application/json
+
+body:
+{
+  "email": "user@example.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
 ```
 <img width="471" alt="Screen Shot 2021-03-09 at 2 27 22 PM" src="https://user-images.githubusercontent.com/68261312/110540307-91624480-80e3-11eb-96ad-0552f637f8c3.png">
 
-### Create a session for a user
+### User Login
 ```
+NOTE: User information must be sent in the body of the request NOT in query params
+
 POST http://localhost:3000/api/v1/sessions
+Content-Type: application/json
+Accept: application/json
+
+body:
+{
+  "email": "whatever@example.com",
+  "password": "password"
+}
+
 ```
 <img width="476" alt="Screen Shot 2021-03-09 at 3 50 22 PM" src="https://user-images.githubusercontent.com/68261312/110549349-29b1f680-80ef-11eb-991c-0f0157f5b667.png">
 
 ### Create Road Trip by a User
 ```
+NOTE: User information must be sent in the body of the request NOT in query params
+
 POST http://localhost:3000/api/v1/road_trip
+Content-Type: application/json
+Accept: application/json
+
+body:
+{
+  "origin": "Denver,CO",
+  "destination": "Pueblo,CO",
+  "api_key": "jgn983hy48thw9begh98h4539h4"
+}
 ```
 <img width="360" alt="Screen Shot 2021-03-10 at 12 02 59 AM" src="https://user-images.githubusercontent.com/68261312/110589655-fb0a3f00-8133-11eb-8b44-05689d6da6c8.png">
 
