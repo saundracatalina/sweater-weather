@@ -97,5 +97,19 @@ describe "a FE request cycle for a registered user creating a road trip" do
       expect(attributes[:end_city]).to eq("Los Angeles,CA")
     end
   end
-
+  # it "can create a roadtrip when given a start point, destination, and a valid api_key" do
+  #   VCR.use_cassette('NY_to_UK_trip') do
+  #     user = create(:user)
+  #     params = {
+  #               "origin": "New York,NY",
+  #               "destination": "London,",
+  #               "api_key": user.api_key
+  #               }
+  #     headers = { 'CONTENT_TYPE': 'application/json', 'ACCEPT': 'application/json' }
+  #
+  #     post '/api/v1/road_trip', headers: headers, params: JSON.generate(params)
+  #
+  #     expect(response).to_not be_successful
+  #   end
+  # end
 end
