@@ -5,9 +5,10 @@ class LocationService
       JSON.parse(response.body, symbolize_names: true)
     end
 
-    def road_trip(from, to)
+    def road_trip_time(from, to)
       response = conn.get("/directions/v2/route?key=#{ENV['MAP_API_KEY']}&from=#{from}&to=#{to}")
-      JSON.parse(response.body, symbolize_names: true)
+      data = JSON.parse(response.body, symbolize_names: true)
+      data[:route][:formattedTime]
     end
 
     private

@@ -34,10 +34,9 @@ describe 'LocationService' do
       VCR.use_cassette('road_trip_travel_time') do
         from = "Denver,CO"
         to = "Pueblo,CO"
-        data = LocationService.road_trip(from, to)
+        data = LocationService.road_trip_time(from, to)
 
-        expect(data[:route]).to be_a(Hash)
-        expect(data[:route][:formattedTime]).to be_a(String)
+        expect(data).to be_a(String)
       end
     end
   end
