@@ -1,7 +1,7 @@
 # Sweater Weather  
 
 ## Overview  
-Sweater Weather was a 5 day project for Turing School of Software & Design's Backend Program. This is a backend application that exposes API endpoints (outlined below) for a frontend team to utilize for an application where users can plan a road trip. This application exposes endpoints to see the current weather as well as the forecasted weather at a specified destination.  
+Sweater Weather was a 5-day project for Turing School of Software & Design's Backend Program.  This is a backend application that exposes API endpoints (outlined below) for a frontend team to utilize.  These endpoints include current weather, hourly weather, daily weather, and future weather and travel time for a road trip destination! 
 
 ## README Content
 - [Learning Goals](#learning-goals)
@@ -65,7 +65,7 @@ $ open coverage/index.html
 
 ## Database Schema
 
-
+<img width="310" alt="Screen Shot 2021-03-10 at 12 08 39 AM" src="https://user-images.githubusercontent.com/68261312/110590243-c5b22100-8134-11eb-9a25-e2f4ae7e6622.png">
 
 
 ## API Endpoints
@@ -96,12 +96,10 @@ POST http://localhost:3000/api/v1/sessions
 <img width="476" alt="Screen Shot 2021-03-09 at 3 50 22 PM" src="https://user-images.githubusercontent.com/68261312/110549349-29b1f680-80ef-11eb-991c-0f0157f5b667.png">
 
 ### Create Road Trip by a User
-
 ```
 POST http://localhost:3000/api/v1/road_trip
 ```
-- IMAGE OF JSON RESPONSE HERE
-
+<img width="360" alt="Screen Shot 2021-03-10 at 12 02 59 AM" src="https://user-images.githubusercontent.com/68261312/110589655-fb0a3f00-8133-11eb-8b44-05689d6da6c8.png">
 
 ## Author
 
