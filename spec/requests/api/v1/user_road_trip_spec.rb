@@ -57,4 +57,20 @@ describe "a FE request cycle for a registered user creating a road trip" do
     expect(response).to_not be_successful
     expect(json[:error]).to eq("Incorrect credentials, please try again")
   end
+  it "gives a 401 if missing a location" do
+    user = create(:user)
+    params = {
+              "origin": "Denver,CO",
+              "api_key": user.api_key
+              }
+    headers = { 'CONTENT_TYPE': 'application/json', 'ACCEPT': 'application/json' }
+
+    post '/api/v1/road_trip', headers: headers, params: JSON.generate(params)
+
+    json = JSON.parse(response.body, symbolize_names: true)
+
+    expect(response.status).to eq(400)
+    expect(response).to_not be_successful
+    expect(json[:error]).to eq("All fields required, please try again")
+  end
 end
