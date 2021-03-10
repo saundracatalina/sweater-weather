@@ -29,7 +29,7 @@ describe 'LocationService' do
       end
     end
   end
-  describe '.road_trip' do
+  describe '.road_trip_time' do
     it 'returns JSON that includes the travel time of a trip' do
       VCR.use_cassette('road_trip_travel_time') do
         from = "Denver,CO"
