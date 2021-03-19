@@ -11,6 +11,7 @@ gem 'faraday'
 gem 'figaro'
 gem 'fast_jsonapi'
 gem 'bcrypt'
+gem 'travis'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
