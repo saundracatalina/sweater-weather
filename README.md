@@ -51,6 +51,7 @@ $ rails s
 ```
 
 ## Testing Tools Utilized
+- TravisCI for Continuous Integration
 - RSpec  
 - Capybara  
 - Webmock  
