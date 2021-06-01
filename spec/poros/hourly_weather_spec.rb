@@ -24,7 +24,6 @@ describe HourlyWeather do
             }
       hourly_weather = HourlyWeather.new(data)
       expect(hourly_weather).to be_an(HourlyWeather)
-      # expect(hourly_weather.time).to eq("08:00:00")
       expect(hourly_weather.temperature).to eq(51.67)
       expect(hourly_weather.conditions).to eq("overcast clouds")
       expect(hourly_weather.icon).to eq("04n")
